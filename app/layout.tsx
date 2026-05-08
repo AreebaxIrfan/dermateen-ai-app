@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'DermaTeen AI | AI-Powered Acne Severity Analyzer for Teenagers',
-  description: 'Understand your skin with AI. DermaTeen AI helps teenagers analyze acne severity, get personalized skincare recommendations, and track skin health progress.',
-  keywords: ['acne analyzer', 'skincare AI', 'teen skincare', 'acne treatment', 'skin health'],
-  authors: [{ name: 'DermaTeen AI' }],
+  title: 'GlowUp Scanner | AI-Powered Acne Severity Analyzer for Teenagers',
+  description: 'Understand your skin with AI. GlowUp Scanner helps teenagers analyze acne severity, get personalized skincare recommendations, and track skin health progress.',
+  keywords: ['acne analyzer', 'skincare AI', 'teen skincare', 'acne treatment', 'skin health', 'glowup'],
+  authors: [{ name: 'GlowUp Scanner' }],
   openGraph: {
-    title: 'DermaTeen AI | AI-Powered Acne Severity Analyzer',
+    title: 'GlowUp Scanner | AI-Powered Acne Severity Analyzer',
     description: 'Understand your skin with AI. Get personalized skincare recommendations.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DermaTeen AI | AI-Powered Acne Severity Analyzer',
+    title: 'GlowUp Scanner | AI-Powered Acne Severity Analyzer',
     description: 'Understand your skin with AI. Get personalized skincare recommendations.',
   },
 }

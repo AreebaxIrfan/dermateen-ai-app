@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const plans = [
   {
     name: "Free",
-    description: "Perfect for trying out DermaTeen AI",
+    description: "Perfect for trying out GlowUp Scanner",
     price: "$0",
     period: "forever",
     icon: Zap,

@@ -132,7 +132,7 @@ export function Features() {
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed text-balance">
-            DermaTeen AI combines cutting-edge artificial intelligence with dermatologist expertise 
+            GlowUp Scanner combines cutting-edge artificial intelligence with dermatologist expertise 
             to give you the most comprehensive skin analysis tool available.
           </p>
         </motion.div>
@@ -158,7 +158,7 @@ export function Features() {
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Your privacy is our priority. All images are encrypted, processed securely, and never stored 
-            without your consent. DermaTeen AI is HIPAA compliant and backed by healthcare professionals.
+            without your consent. GlowUp Scanner is HIPAA compliant and backed by healthcare professionals.
           </p>
         </motion.div>
       </div>

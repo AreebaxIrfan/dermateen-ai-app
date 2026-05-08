@@ -107,7 +107,7 @@ export function Footer() {
               >
                 <Sparkles className="w-5 h-5 text-white" />
               </motion.div>
-              <span className="text-xl font-bold text-gradient">DermaTeen AI</span>
+              <span className="text-xl font-bold text-gradient">GlowUp Scanner</span>
             </Link>
             <p className="text-muted-foreground text-sm mb-4 max-w-xs">
               AI-powered skincare analysis designed specifically for teenagers. 
@@ -188,7 +188,7 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} DermaTeen AI. All rights reserved.
+              &copy; {new Date().getFullYear()} GlowUp Scanner. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               Made with <Heart className="w-4 h-4 text-pink-500 fill-pink-500" /> for teenagers worldwide

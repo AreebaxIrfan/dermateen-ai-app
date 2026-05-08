@@ -43,7 +43,7 @@ export function Navigation() {
           >
             <Sparkles className="w-5 h-5 text-white" />
           </motion.div>
-          <span className="text-xl font-bold text-gradient">DermaTeen AI</span>
+          <span className="text-xl font-bold text-gradient">GlowUp Scanner</span>
         </Link>
 
         {/* Desktop Navigation */}

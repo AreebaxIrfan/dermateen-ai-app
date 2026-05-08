@@ -11,22 +11,22 @@ const faqs = [
   },
   {
     question: "Is my photo data secure and private?",
-    answer: "Absolutely. All images are encrypted end-to-end and processed securely. We never store your photos without explicit consent, and you can delete your data at any time. DermaTeen AI is HIPAA compliant."
+    answer: "Absolutely. All images are encrypted end-to-end and processed securely. We never store your photos without explicit consent, and you can delete your data at any time. GlowUp Scanner is HIPAA compliant."
   },
   {
-    question: "Can DermaTeen AI replace a dermatologist?",
-    answer: "DermaTeen AI is designed to supplement, not replace, professional dermatological care. While our AI provides accurate analysis and recommendations, we always recommend consulting with a dermatologist for severe conditions."
+    question: "Can GlowUp Scanner replace a dermatologist?",
+    answer: "GlowUp Scanner is designed to supplement, not replace, professional dermatological care. While our AI provides accurate analysis and recommendations, we always recommend consulting with a dermatologist for severe conditions."
   },
   {
-    question: "What age group is DermaTeen AI designed for?",
-    answer: "DermaTeen AI is specifically designed for teenagers aged 13-19, with recommendations tailored to teen skin biology, lifestyle, and needs. Our interface and content are age-appropriate and teen-friendly."
+    question: "What age group is GlowUp Scanner designed for?",
+    answer: "GlowUp Scanner is specifically designed for teenagers aged 13-19, with recommendations tailored to teen skin biology, lifestyle, and needs. Our interface and content are age-appropriate and teen-friendly."
   },
   {
     question: "How often should I scan my skin?",
     answer: "We recommend scanning once a week to track progress effectively. This frequency allows you to see meaningful changes while building a consistent skincare routine."
   },
   {
-    question: "Can I use DermaTeen AI with my current skincare products?",
+    question: "Can I use GlowUp Scanner with my current skincare products?",
     answer: "Yes! Our recommendations take into account that you may already have a skincare routine. The AI suggests improvements and additions rather than complete replacements, unless your current products are potentially harmful."
   },
   {
@@ -123,7 +123,7 @@ export function FAQ() {
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed text-balance">
-            Everything you need to know about DermaTeen AI. Can&apos;t find what you are looking for? 
+            Everything you need to know about GlowUp Scanner. Can&apos;t find what you are looking for? 
             Chat with our AI assistant.
           </p>
         </motion.div>

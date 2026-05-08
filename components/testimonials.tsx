@@ -10,7 +10,7 @@ const testimonials = [
     age: 16,
     avatar: "ES",
     rating: 5,
-    text: "DermaTeen AI completely changed my skincare routine! I went from severe acne to clear skin in just 3 months. The personalized recommendations were spot on.",
+    text: "GlowUp Scanner completely changed my skincare routine! I went from severe acne to clear skin in just 3 months. The personalized recommendations were spot on.",
     improvement: "90% improvement",
     gradient: "from-purple-500 to-cyan-500"
   },
@@ -55,7 +55,7 @@ const testimonials = [
     age: 17,
     avatar: "NB",
     rating: 5,
-    text: "The before and after photos in my dashboard blow my mind every time. DermaTeen AI is the real deal. Worth every penny of the Pro plan!",
+    text: "The before and after photos in my dashboard blow my mind every time. GlowUp Scanner is the real deal. Worth every penny of the Pro plan!",
     improvement: "Complete transformation",
     gradient: "from-purple-500 to-cyan-500"
   },
@@ -151,7 +151,7 @@ export function Testimonials() {
           
           <p className="text-lg text-muted-foreground leading-relaxed text-balance">
             Join thousands of teenagers who have transformed their skin and boosted their 
-            confidence with DermaTeen AI.
+            confidence with GlowUp Scanner.
           </p>
         </motion.div>
 
