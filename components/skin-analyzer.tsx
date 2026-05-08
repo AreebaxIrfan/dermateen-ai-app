@@ -24,12 +24,15 @@ interface AnalysisResult {
   confidence: number
   acneTypes: string[]
   overallScore: number
+  affectedAreas: string[]
   recommendations: {
     skincare: string[]
     diet: string[]
     hydration: string
     sleep: string
+    lifestyle: string[]
   }
+  additionalNotes: string | null
 }
 
 const severityConfig = {
@@ -38,28 +41,7 @@ const severityConfig = {
   severe: { color: "from-red-500 to-pink-500", label: "Severe", bgColor: "bg-red-500/10" },
 }
 
-const mockAnalysis: AnalysisResult = {
-  severity: "mild",
-  confidence: 94,
-  acneTypes: ["Comedonal", "Papular"],
-  overallScore: 78,
-  recommendations: {
-    skincare: [
-      "Use a gentle, non-comedogenic cleanser twice daily",
-      "Apply a 2% salicylic acid treatment to affected areas",
-      "Use an oil-free moisturizer with niacinamide",
-      "Apply SPF 30+ sunscreen every morning"
-    ],
-    diet: [
-      "Reduce dairy intake",
-      "Eat more omega-3 rich foods",
-      "Include zinc-rich foods like pumpkin seeds",
-      "Stay away from high-glycemic foods"
-    ],
-    hydration: "Drink at least 8 glasses (2 liters) of water daily",
-    sleep: "Aim for 8-10 hours of quality sleep per night"
-  }
-}
+// Removed mock data - now using real AI analysis
 
 export function SkinAnalyzer() {
   const [image, setImage] = useState<string | null>(null)
@@ -67,6 +49,7 @@ export function SkinAnalyzer() {
   const [progress, setProgress] = useState(0)
   const [result, setResult] = useState<AnalysisResult | null>(null)
   const [isDragging, setIsDragging] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleDrop = useCallback((e: React.DragEvent) => {
@@ -96,30 +79,53 @@ export function SkinAnalyzer() {
   }
 
   const analyzeImage = async () => {
+    if (!image) return
+    
     setIsAnalyzing(true)
     setProgress(0)
+    setError(null)
 
-    // Simulate AI analysis with progress
+    // Progress animation
     const interval = setInterval(() => {
       setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval)
-          return 100
+        if (prev >= 90) {
+          return prev
         }
-        return prev + Math.random() * 15
+        return prev + Math.random() * 10
       })
-    }, 200)
+    }, 300)
 
-    // Simulate API call delay
-    await new Promise((resolve) => setTimeout(resolve, 3000))
-    
-    clearInterval(interval)
-    setProgress(100)
-    
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/analyze-skin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ image }),
+      })
+
+      clearInterval(interval)
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to analyze image')
+      }
+
+      const data = await response.json()
+      
+      setProgress(100)
+      
+      setTimeout(() => {
+        setIsAnalyzing(false)
+        setResult(data.result)
+      }, 500)
+    } catch (err) {
+      clearInterval(interval)
       setIsAnalyzing(false)
-      setResult(mockAnalysis)
-    }, 500)
+      setProgress(0)
+      setError(err instanceof Error ? err.message : 'An error occurred during analysis')
+      console.error('[v0] Analysis error:', err)
+    }
   }
 
   const resetAnalysis = () => {
