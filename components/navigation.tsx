@@ -61,12 +61,16 @@ export function Navigation() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
-            Sign In
-          </Button>
-          <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white border-0">
-            Get Started
-          </Button>
+          <Link href="/auth/login">
+            <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+              Sign In
+            </Button>
+          </Link>
+          <Link href="/auth/sign-up">
+            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white border-0">
+              Get Started
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -100,12 +104,16 @@ export function Navigation() {
                 </Link>
               ))}
               <hr className="border-border" />
-              <Button variant="ghost" className="justify-start">
-                Sign In
-              </Button>
-              <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white border-0">
-                Get Started
-              </Button>
+              <Link href="/auth/login" onClick={() => setIsOpen(false)}>
+                <Button variant="ghost" className="justify-start w-full">
+                  Sign In
+                </Button>
+              </Link>
+              <Link href="/auth/sign-up" onClick={() => setIsOpen(false)}>
+                <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white border-0 w-full">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}
